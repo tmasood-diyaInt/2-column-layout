@@ -1,0 +1,161 @@
+@import '../../../Assets/Styles/variables';
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.625rem;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    z-index: 999;
+    .lefterSide {
+        // box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        background-color: cornflowerblue;
+        align-items: center;
+        width: 15.875rem;
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            img {
+                // margin-left: 1.8125rem;
+                // margin-top: 1.625rem;
+                // margin-bottom: 1.625rem;
+                // margin-right: 0.8125rem;
+                width: 8.125rem;
+                height: 2.75rem;
+            }
+            .userRole {
+                display: flex;
+                align-items: center;
+                margin: 1.1875rem 0.75rem 1.1875rem 0;
+                background: $user-color;
+                border-radius: 6px;
+                width: 4.375rem;
+                height: 2.25rem;
+                p {
+                    font: Inter;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    margin: .625rem .8125rem .5625rem 0.875rem;
+                    color: $text-black;
+                }
+            }
+        }
+    }
+    .righterSide {
+        border-radius: 6px;
+        margin: 1.1875rem 2.875rem 1.1875rem 0;
+        height: 2.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        .userProfile {
+            display: flex;
+            align-items: center;
+            background: $user-color-light;
+            border-radius: 6px;
+            // min-width: 9.3125rem;
+            width: fit-content;
+            height: 2.25rem;
+            img {
+                margin: 2px;
+            }
+            p {
+                font: Inter;
+                font-weight: 400;
+                font-size: 0.75rem;
+                margin: .625rem .8125rem .5625rem 0.875rem;
+                color: $text-black;
+            }
+        }
+        .log-out-btn {
+            position: absolute;
+            top: 2.6rem;
+            cursor: pointer;
+            width: 9.125rem;
+            height: 2.25rem;
+            font-size: 0.875rem;
+            line-height: .9375rem;
+            padding: .625rem .625rem;
+            background: #FFFFFF;
+            box-shadow: 0 .625rem 1.25rem rgba(212, 212, 212, 0.25);
+            border-radius: 6px;
+            &:hover {
+                background-color: $user-color-light;
+            }
+        }
+    }
+}
+
+.bgColor {
+    background-color: $background-color;
+}
+
+@media (max-width:768px) {
+    .header {
+        justify-content: unset;
+        .lefterSide {
+            width: 100%;
+            justify-content: space-between;
+            .hamburger-menu {
+                display: block;
+                margin-left: 1rem;
+            }
+            .logo {
+                .userRole {
+                    display: none;
+                }
+            }
+        }
+        .righterSide {
+            width: 70%;
+            justify-content: end;
+            margin-right: 1rem;
+            .userProfile {
+                // width: 20px;
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px){
+    .header{
+        .righterSide{
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .header{
+        .righterSide{
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 350px){
+    .header{
+        .righterSide{
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 300px){
+    .header{
+        .righterSide{
+            width: 30%;
+        }
+    }
+}

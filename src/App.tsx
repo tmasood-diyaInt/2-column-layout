@@ -1,8 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import './Assets/Styles/style.css';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-function App() {
+import UserProvider from "./Context/UserContext";
+import Dashboard from "./Components/Dashboard";
+import Reports from "./Components/Reports";
+import InstaHOC from "./Components/HOC";
+
+export function ret() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +27,19 @@ function App() {
         </a>
       </header>
     </div>
+  );
+}
+function App() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <UserProvider>
+          <Route exact path="/" component={InstaHOC(Dashboard)} />
+          <Route exact path="/dashboard" component={InstaHOC(Dashboard)} />
+          <Route exact path="/reports" component={InstaHOC(Reports)} />
+        </UserProvider>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

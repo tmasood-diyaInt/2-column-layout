@@ -1,0 +1,46 @@
+@import "./mixins";
+@import "./variables";
+.dashboardSkeleton {
+    .skeletonContainer {
+        flex-direction: column;
+        display: flex;
+    }
+    }
+
+
+.width137 {
+    width: 137px !important;
+}
+
+.width512 {
+    width: 512px;
+}
+
+.hieght35 {
+    height: 36px;
+}
+
+.pr20 {
+    padding-right: 20px !important;
+    ;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.plZero {
+    padding-left: 0px !important;
+}
+
+.disabled {
+    color: $disabled-color;
+}
+
+.minHeightFitContent {
+    min-height: fit-content !important;
+}
+
+.border {
+    border: 2px solid black;
+}

@@ -1,0 +1,179 @@
+@import './mixins';
+@import './variables';
+.left-side {
+    z-index: 5;
+    width: 15.875rem;
+    height: calc(100vh - 4.625rem);
+    background: #FFFFFF;
+    float: left;
+    box-shadow: 0px 10px 30px rgba(17, 38, 146, 0.05);
+    position: fixed;
+    top: 4.625rem;
+    ul {
+        list-style: none;
+        font-size: 0.875rem;
+        width: 12.375rem;
+        margin-left: 2.625rem;
+        padding-top: 1.375rem;
+        color: $text-black;
+        .route-link {
+            color: $text-black;
+            text-decoration: none;
+        }
+        li {
+            width: 100%;
+            // margin-top: 1.25rem;
+            height: 100%;
+            @include flex-center('row', 'space-between');
+            border-radius: 6px;
+            padding: 0.5625rem 0 0.5625rem 0.875rem;
+            cursor: pointer;
+            img {
+                margin-right: .8125rem;
+                width: 0.875rem;
+            }
+        }
+        li:nth-child(1) {
+            margin-top: 0;
+        }
+        #imgBlack {
+            display: inline-block;
+        }
+        #imgWhite {
+            display: none;
+        }
+        .route-link {
+            .active {
+                cursor: default;
+                color: #FFFFFF;
+                // border: 2px solid black;
+                background-color: $primary-color;
+                width: 100%;
+                height: 100%;
+                // transition: 0.5s ease-in-out;
+                #imgBlack {
+                    display: none;
+                }
+                #imgWhite {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+.ml21{
+    margin-left: 40px;
+}
+.txtUserName{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+.imgUserSidebar{
+    box-shadow: 0px 10px 30px rgba(17, 38, 146, 0.05);
+    border-radius: 50%;
+    width: 70% !important;
+}
+.txtHello{
+    text-align: center;
+    color: lightgray;
+}
+.left-side-res {
+    z-index: 9999999999;
+    width: 14.30rem;
+    height: calc(100vh - 4.625rem);
+    background: #FFFFFF;
+    float: left;
+    box-shadow: 0px 10px 30px rgba(17, 38, 146, 0.05);
+    position: fixed;
+    top: 4.625rem;
+    display: none;
+    // transform: scaleX(0);
+    transition: display 1s ease-in-out;
+    ul {
+        list-style: none;
+        font-size: 0.875rem;
+        width: 12.375rem;
+        margin-left: 2.625rem;
+        padding-top: 1.375rem;
+        color: $text-black;
+        .route-link {
+            color: $text-black;
+            text-decoration: none;
+        }
+        li {
+            width: 100%;
+            // margin-top: 1.25rem;
+            height: 100%;
+            @include flex-center('row', 'space-between');
+            border-radius: 6px;
+            padding: 0.5625rem 0 0.5625rem 0.875rem;
+            cursor: pointer;
+            img {
+                margin-right: .8125rem;
+                width: 0.875rem;
+            }
+        }
+        li:nth-child(1) {
+            margin-top: 0;
+        }
+        #imgBlack {
+            display: inline-block;
+        }
+        #imgWhite {
+            display: none;
+        }
+        .route-link {
+            .active {
+                cursor: default;
+                color: #FFFFFF;
+                // border: 2px solid black;
+                background-color: $primary-color;
+                width: 100%;
+                height: 100%;
+                // transition: 0.5s ease-in-out;
+                #imgBlack {
+                    display: none;
+                }
+                #imgWhite {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+.searchButton {
+    transition: 0.3s ease-in-out;
+    height: 2.1875rem;
+    right: 0;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $background-color;
+    border-radius: 0.5rem ;
+    padding: 0.5rem;
+    &:hover {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        // background-color: #f5f5f5;
+    }
+    &:active {
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        // background-color: #992d2d;
+    }
+}
+
+
+@media (max-width:768px) {
+    .left-side {
+        display: none;
+    }
+    .left-side-res {
+        // width: 14.30rem;
+        display: block;
+        ul {
+            margin-left: 1rem;
+        }
+    }
+}
