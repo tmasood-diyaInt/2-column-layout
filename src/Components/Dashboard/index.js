@@ -5,7 +5,7 @@ export default function Dashboard() {
       <div className="dashboardSkeleton ">
         <div className="skeletonContainer">
           <div className='strip__Top'>
-          <p>Dashboard</p>
+          <p>Dashboard Screen</p>
           </div>
           
         </div>

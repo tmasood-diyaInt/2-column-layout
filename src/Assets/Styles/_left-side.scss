@@ -47,16 +47,16 @@
                 cursor: default;
                 color: #FFFFFF;
                 // border: 2px solid black;
-                background-color: $primary-color;
+                background-color: $user-color;
                 width: 100%;
                 height: 100%;
                 // transition: 0.5s ease-in-out;
-                #imgBlack {
-                    display: none;
-                }
-                #imgWhite {
-                    display: inline-block;
-                }
+                // #imgBlack {
+                //     display: none;
+                // }
+                // #imgWhite {
+                //     display: inline-block;
+                // }
             }
         }
     }

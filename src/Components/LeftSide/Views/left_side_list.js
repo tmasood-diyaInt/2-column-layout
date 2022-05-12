@@ -25,18 +25,27 @@ export default function LEFT_SIDE_LIST({ menuType, isActive, setIsActive }) {
         <p className="txtUserName">{currentUser?.name}</p>
       </li>
 
-      
       <li className="">
         <button className="searchButton">
           <img src={Images.search_icon} alt="search" /> Live Stats
         </button>
       </li>
-      <li className="route-link" onClick={()=> history.push('/dashboard')}>
-        <p className="txtUserName">Dashboard</p>
-      </li>
-      <li className="route-link" onClick={()=> history.push('/reports')}>
-        <p className="txtUserName">Reports</p>
-      </li>
+      <Link id={`sidebar`} to={"/dashboard"} className="route-link">
+        <li
+          className={isActive === "/dashboard" ? "active" : ""}
+          onClick={() => history.push("/dashboard")}
+        >
+          <p className="labelDashboard">Dashboard</p>
+        </li>
+      </Link>
+      <Link id={`sidebar`} to={"/reports"} className="route-link">
+        <li
+          className={isActive === "/reports" ? "active" : ""}
+          onClick={() => history.push("/reports")}
+        >
+          <p className="labelReports">Reports</p>
+        </li>
+      </Link>
     </ul>
   );
 }

@@ -8,7 +8,7 @@ import {useLocation} from 'react-router-dom'
 export default function LeftSide({ hideLeft, setHideLeft }) {
     const location = useLocation();
     const [sideMenuType, setSideMenuType] = useState([])
-    const [isActive, setIsActive] = useState(location.pathname === '/admin' ? '/admin/orders' : location.pathname)
+    const [isActive, setIsActive] = useState(window.location.pathname)
 
     
     return (

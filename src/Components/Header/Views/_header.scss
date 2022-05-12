@@ -15,6 +15,7 @@
         background-color: cornflowerblue;
         align-items: center;
         width: 15.875rem;
+        height: 100%;
         .hamburger-menu {
             display: none;
             cursor: pointer;
@@ -63,7 +64,7 @@
             border-radius: 6px;
             // min-width: 9.3125rem;
             width: fit-content;
-            height: 2.25rem;
+            height: 3.0rem;
             img {
                 margin: 2px;
             }

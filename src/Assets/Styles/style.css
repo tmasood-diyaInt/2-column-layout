@@ -67,17 +67,9 @@
 .left-side ul .route-link .active {
   cursor: default;
   color: #FFFFFF;
-  background-color: #255475;
+  background-color: #C4D3C7;
   width: 100%;
   height: 100%;
-}
-
-.left-side ul .route-link .active #imgBlack {
-  display: none;
-}
-
-.left-side ul .route-link .active #imgWhite {
-  display: inline-block;
 }
 
 .ml21 {
@@ -246,6 +238,7 @@
       -ms-flex-align: center;
           align-items: center;
   width: 15.875rem;
+  height: 100%;
 }
 
 .header .lefterSide .hamburger-menu {
@@ -317,7 +310,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 2.25rem;
+  height: 3.0rem;
 }
 
 .header .righterSide .userProfile img {
