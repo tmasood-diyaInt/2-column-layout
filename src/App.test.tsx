@@ -26,7 +26,7 @@ describe("App", () => {
   
 });
 
-test('renders learn react link', () => {
+test('renders Hello text', () => {
   render(<App />);
   const linkElement = screen.getByText('Hello');
   expect(linkElement).toBeInTheDocument();

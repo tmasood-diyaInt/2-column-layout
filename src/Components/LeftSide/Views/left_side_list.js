@@ -2,11 +2,12 @@ import { useContext } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import { Images } from "./../../../Assets/Images/Images";
 import { UserContext } from "../../../Context/UserContext";
+import { CONSTANTS } from "../../../Helpers/Constants";
 
-export default function LEFT_SIDE_LIST({ menuType, isActive, setIsActive }) {
+export default function LEFT_SIDE_LIST({ isActive }) {
   const location = useLocation();
   const history = useHistory();
-  const { currentUser, setCurrentUser, setChanges } = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
 
   return (
     <ul>
@@ -19,7 +20,7 @@ export default function LEFT_SIDE_LIST({ menuType, isActive, setIsActive }) {
         />
       </li>
       <li className="route-link ml21">
-        <p className="txtHello">Hello</p>
+        <p className="txtHello">{CONSTANTS.HELLO_TXT}</p>
       </li>
       <li className="route-link">
         <p className="txtUserName">{currentUser?.name}</p>
@@ -27,7 +28,7 @@ export default function LEFT_SIDE_LIST({ menuType, isActive, setIsActive }) {
 
       <li className="">
         <button className="searchButton">
-          <img src={Images.search_icon} alt="search" /> Live Stats
+          <img src={Images.search_icon} alt="search" /> {CONSTANTS.STATS_TXT}
         </button>
       </li>
       <Link id={`sidebar`} to={"/dashboard"} className="route-link">
@@ -35,7 +36,7 @@ export default function LEFT_SIDE_LIST({ menuType, isActive, setIsActive }) {
           className={isActive === "/dashboard" ? "active" : ""}
           onClick={() => history.push("/dashboard")}
         >
-          <p className="labelDashboard">Dashboard</p>
+          <p className="labelDashboard">{CONSTANTS.DASHBOARD_TXT}</p>
         </li>
       </Link>
       <Link id={`sidebar`} to={"/reports"} className="route-link">
@@ -43,7 +44,7 @@ export default function LEFT_SIDE_LIST({ menuType, isActive, setIsActive }) {
           className={isActive === "/reports" ? "active" : ""}
           onClick={() => history.push("/reports")}
         >
-          <p className="labelReports">Reports</p>
+          <p className="labelReports">{CONSTANTS.REPORTS_TXT}</p>
         </li>
       </Link>
     </ul>

@@ -7,11 +7,12 @@ export default function HeaderView({ logOut, setLogOut, logOutFunction, hideLeft
     return (
         <div className="header">
             <div className="lefterSide">
-                <div className='hamburger-menu' onClick={()=>setHideLeft(!hideLeft)}><img src={Images.hamburger_menu} alt='hamburger'/></div>
                 <div className="logo">
                     <img src={Images.user_logo} alt="logo" />
                     
                 </div>
+                <div className='hamburger-menu' ><img src={Images.hamburger_menu} alt='hamburger'/></div>
+                
             </div>
             <div className="righterSide">
                 <span className="userProfile pointerCursor" onClick={() => setLogOut(!logOut)}>

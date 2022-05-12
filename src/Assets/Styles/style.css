@@ -242,7 +242,7 @@
 }
 
 .header .lefterSide .hamburger-menu {
-  display: none;
+  display: block;
   cursor: pointer;
 }
 
